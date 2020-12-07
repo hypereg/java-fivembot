@@ -19,7 +19,7 @@ public class MainStatus {
     private static Settings settings = SettingsManager.getInstance().getSettings();
 
     public static void main(String[] args) throws JSONException, LoginException {
-        JDA jda = JDABuilder.createDefault(settings.getBotToken()).build();
+        JDA jda = JDABuilder.createDefault(settings.getBotToken()).addEventListeners(new AuthorBot()).build();
         new Timer().schedule(new TimerTask(){
             public void run(){
                 String a = jsonGetRequest(settings.getServerAdress());
@@ -35,6 +35,7 @@ public class MainStatus {
         String text = new Scanner(inputStream, "UTF-8").useDelimiter("\\Z").next();
         return text;
     }
+
 
     public static String jsonGetRequest(String urlQueryString) {
         String json = null;
