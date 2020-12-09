@@ -1,8 +1,8 @@
 {
   "ownerId": "",
-  "botToken": "Nzc1MzY3MzM2MDY3NzI3Mzcw.X6lTGg.F-sekVVkRn9jOMeplS_eCaYldxM",
+  "botToken": "",
   "prefix": "!",
-  "serverAdress": "http://194.62.1.91:30120/players.json",
+  "serverAdress": "",
   "serverDescription": "/64 Graczy | TestRP",
   "serverOffline": "",
   "refreshTime": 5000
