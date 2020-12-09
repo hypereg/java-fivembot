@@ -84,7 +84,7 @@ public class SettingsManager {
         newSettings.setPrefix("!");
         newSettings.setServerAdress("127.0.0.1:30120/players.json");
         newSettings.setServerDescription("/64 Graczy | TestRP");
-        newSettings.setServerOffline("127.0.0.1:30120/players.json");
+        newSettings.setServerOffline("Serwer offline 💥");
         newSettings.setRefreshTime(5000);
         return newSettings;
     }

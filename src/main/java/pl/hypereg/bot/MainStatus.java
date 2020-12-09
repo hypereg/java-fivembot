@@ -33,6 +33,7 @@ public class MainStatus {
                     jda.getPresence().setActivity(Activity.playing(s + settings.getServerDescription()));
                 } catch (Exception e){
                     jda.getPresence().setActivity(Activity.playing(settings.getServerOffline()));
+                    return;
                 }
             }},0,settings.getRefreshTime());
     }
