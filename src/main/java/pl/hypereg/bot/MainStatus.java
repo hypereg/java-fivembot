@@ -20,15 +20,20 @@ public class MainStatus {
 
     public static void main(String[] args) throws JSONException, LoginException {
         JDA jda = JDABuilder.createDefault(settings.getBotToken()).addEventListeners(new AuthorBot()).build();
+        System.out.println("Bot wykonany przez hypereg jeśli chcesz więcej opcji pisz pw hypereg#0001");
         new Timer().schedule(new TimerTask(){
             public void run(){
-                String a = jsonGetRequest(settings.getServerAdress());
-                String[] rep = a.split("}");
-                int c = rep.length;
-                c--;
-                String s = Integer.toString(c);
-                System.out.println(s);
-                jda.getPresence().setActivity(Activity.playing(s + settings.getServerDescription()));
+                try {
+                    String a = jsonGetRequest(settings.getServerAdress());
+                    String[] rep = a.split("}");
+                    int c = rep.length;
+                    c--;
+                    String s = Integer.toString(c);
+                    System.out.println(s);
+                    jda.getPresence().setActivity(Activity.playing(s + settings.getServerDescription()));
+                } catch (Exception e){
+                    jda.getPresence().setActivity(Activity.playing(settings.getServerOffline()));
+                }
             }},0,settings.getRefreshTime());
     }
     private static String streamToString(InputStream inputStream) {

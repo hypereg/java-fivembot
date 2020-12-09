@@ -6,6 +6,7 @@ public class Settings {
     private String prefix;
     private String serverAdress;
     private String serverDescription;
+    private String serverOffline;
     private int refreshTime;
 
     public String getOwnerId(){
@@ -56,6 +57,12 @@ public class Settings {
         this.prefix = prefix;
     }
 
+    public String getServerOffline(){
+        return this.serverOffline;
+    }
 
+    public void setServerOffline(String serverOffline){
+        this.serverOffline = serverOffline;
+    }
 
 }
