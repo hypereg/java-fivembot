@@ -1,3 +1,3 @@
 # java-fivembot
-fivem simple bot.
+☄ FIVEM SIMPLE JAVA BOT ( NOT SUPPORTED )
 SIMPLE JAVA FIVEM BOT (NOT SUPPORTED)
